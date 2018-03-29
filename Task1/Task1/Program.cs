@@ -9,10 +9,14 @@ namespace Task1
         static void Main(string[] args)
         {
             Console.WriteLine("Database CRUD operations");
-            // Person person1 = new Person("Arto", 25);
-            // PersonRepository.Create(person1);
 
-            var persons = PersonRepository.Get();
+            PersonRepository personRepository = new PersonRepository();
+
+            Person newPerson = new Person("Roope Ankka", 80);
+            personRepository.Create(newPerson);
+            
+
+            var persons = personRepository.Get();
 
             foreach (var p in persons)
             {

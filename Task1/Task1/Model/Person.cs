@@ -16,6 +16,7 @@ namespace Task1.Model
         {
             Name = name;
             Age = age;
+            Phone = new HashSet<Phone>();
         }
 
         public Person(string name, short? age, ICollection<Phone> phone)
